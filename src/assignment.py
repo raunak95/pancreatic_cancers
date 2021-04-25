@@ -52,7 +52,10 @@ groups = df_pca2.groupby('tumor_type')
 for name, group in groups:
     plt.plot(group['PC1'], group['PC2'], marker="o", linestyle="", label=name)
 
-plt.gcf().set_size_inches((25, 25))
+plt.gcf().set_size_inches((10, 10))
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.title('PC1 v/s PC2 for Pancreatic tumor types')
 plt.savefig(os.path.join(main_dir, 'results/task2/PCA_scatter_tumor_type.png'))
 plt.close('all')
 
@@ -71,7 +74,7 @@ for n in [2, 10, 20, 30, 50]:
 
 df_pca_var = pd.DataFrame.from_dict(captured_variance, orient = 'index')
 df_pca_var.plot(legend = None)
-plt.gcf().set_size_inches((25, 25))
+plt.gcf().set_size_inches((10, 10))
 plt.xlabel('No. of components')
 plt.ylabel('Captured variance')
 plt.title('Captured variance versus no. of PCA components')
