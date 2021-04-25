@@ -52,6 +52,7 @@ groups = df_pca2.groupby('tumor_type')
 for name, group in groups:
     plt.plot(group['PC1'], group['PC2'], marker="o", linestyle="", label=name)
 
+plt.legend()
 plt.gcf().set_size_inches((10, 10))
 plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
@@ -97,4 +98,14 @@ plt.hist(df_path_exo['score'].tolist(), bins=40)
 plt.gcf().set_size_inches((15, 15))
 plt.title('GSVA scores historgram for Exocrine tumors')
 plt.savefig(os.path.join(main_dir, 'results/task3/GSVA_historgram.png'))
+plt.close('all')
+
+## Bonus task
+# GSVA analysis for pancreatic_cancers
+df_pan = pd.read_csv(os.path.join(main_dir, 'results/bonus/pancreatic_cancer_pathways.csv')).drop(['name'], axis=1).T
+df_pan.columns = ['score']
+plt.hist(df_path_exo['score'].tolist(), bins=40)
+plt.gcf().set_size_inches((15, 15))
+plt.title('GSVA scores historgram for Pancreatic cancers')
+plt.savefig(os.path.join(main_dir, 'results/bonus/GSVA_pancreaticCancer_historgram.png'))
 plt.close('all')
