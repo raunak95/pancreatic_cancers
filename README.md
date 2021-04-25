@@ -22,4 +22,5 @@ Looking at the histogram distribution of GSVA scores on Exocrine tumors - the co
 ![](https://github.com/raunak95/pancreatic_cancers/blob/master/results/task3/GSVA_historgram.png)
 
 ### Bonus task - Running GSVA in normal Pancreas tissues
-![](https://github.com/raunak95/pancreatic_cancers/blob/master/results/bonus/GSVA_pancreaticCancer_historgram.png)
+Looking at the histogram distribution of GSVA scores on normal Pancreas tissue - the counts peak at -0.491, -0.3, 0.436
+[](https://github.com/raunak95/pancreatic_cancers/blob/master/results/bonus/GSVA_pancreas_historgram.png)
