@@ -104,8 +104,8 @@ plt.close('all')
 # GSVA analysis for pancreatic_cancers
 df_pan = pd.read_csv(os.path.join(main_dir, 'results/bonus/pancreatic_cancer_pathways.csv')).drop(['name'], axis=1).T
 df_pan.columns = ['score']
-plt.hist(df_path_exo['score'].tolist(), bins=40)
+plt.hist(df_pan['score'].tolist(), bins=40)
 plt.gcf().set_size_inches((15, 15))
-plt.title('GSVA scores historgram for Pancreatic cancers')
-plt.savefig(os.path.join(main_dir, 'results/bonus/GSVA_pancreaticCancer_historgram.png'))
+plt.title('GSVA scores historgram for normal Pancreas tissues')
+plt.savefig(os.path.join(main_dir, 'results/bonus/GSVA_pancreas_historgram.png'))
 plt.close('all')
